@@ -6,8 +6,8 @@ export const Headline = () => {
     const [country, setCountry] = useState("us")
     let API_KEY = "8d0ccc8b9174417aa93d627465cb0b3e"
     let url = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${API_KEY}`
-    const { data, loading, error, setLoading } = useFetch(url)
-    console.log(data)
+    const { data, loading, } = useFetch(url)
+    console.log("making request", data)
 
     function handleSelectChange(event: any) {
         setCountry(event.target.value);

@@ -1,5 +1,12 @@
+interface Props {
+    img: string
+    title: string
+    content: string
+    url: string
+    name: string
+}
 
-export const NewsCard = ({ img, title, content, url, name }) => {
+export const NewsCard = ({ img, title, content, url, name }: Props) => {
     return (
         <>
             <div className='w-full lg:flex  shadow-lg hover:shadow-xl  my-6 border '>

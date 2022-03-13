@@ -9,7 +9,7 @@ export const Headline = () => {
     const { data, loading, error, setLoading } = useFetch(url)
     console.log(data)
 
-    function handleSelectChange(event) {
+    function handleSelectChange(event: any) {
         setCountry(event.target.value);
     }
 
@@ -24,7 +24,7 @@ export const Headline = () => {
                         <option value="in">india</option>
                     </select>
                 </div>
-                {loading ? loading && <div>loading</div> : data ? data.map((ar) => {
+                {loading ? loading && <div>loading</div> : data ? data.map((ar: any) => {
                     return <NewsCard img={ar.urlToImage} title={ar.title} content={ar.description} url={ar.url} name={ar.source.name} />
                 })
                     : <>

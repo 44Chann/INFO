@@ -4,7 +4,6 @@ import useFetch from "../../hooks/useFetch"
 import { NewsCard } from "./NewsCard"
 
 
-
 export const Search = () => {
     let { term } = useParams()
 
@@ -17,7 +16,7 @@ export const Search = () => {
                 <div >
                     <h1>Search Results for "{term}" </h1>
                 </div>
-                {loading ? loading && <div>loading</div> : data ? data.map((ar) => {
+                {loading ? loading && <div>loading</div> : data ? data.map((ar: any) => {
                     return <NewsCard img={ar.urlToImage} title={ar.title} content={ar.description} url={ar.url} name={ar.source.name} />
                 })
                     : <>

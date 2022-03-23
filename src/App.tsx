@@ -10,8 +10,9 @@ function App() {
 
   return (
     <div className="w-full min-h-screen">
-      <div>
+      <div className=' flex flex-col'>
         <h1 className='text-center my-5 font-extrabold text-4xl'>IN.FO</h1>
+        <Link to="/archives" className='text-center underline'>Archives</Link>
       </div>
       <div>
         <Routes>
